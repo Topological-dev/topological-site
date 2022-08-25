@@ -7,7 +7,7 @@ const Services = ({location}) => {
     <>
       <Layout>
         <main className="page">
-          <AllServices activeService={{title: location.state.title || "Browser"}} location={location}/>
+          <AllServices activeService={{title: location && location.state && location.state.title || "Browser"}} />
         </main>
       </Layout>
     </>
