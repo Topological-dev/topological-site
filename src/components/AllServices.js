@@ -46,7 +46,7 @@ const Services = [
   },
 ]
 
-const AllServices = ({activeService}) => {
+const AllServices = ({activeService, location}) => {
     const [service, setService] = useState(activeService || Services[0])
 
     useEffect( () => {
@@ -60,7 +60,7 @@ const AllServices = ({activeService}) => {
     }
 
 
-  const location = window.location.pathname
+  //const location = window.location.pathname
 
   return (
     <section className="services-container">
