@@ -4,7 +4,7 @@ import AllServices from "../components/AllServices"
 import Hero from "../components/Hero"
 //import SEO from '../components/SEO'
 
-export default function Home() {
+export default function Home({location}) {
  
 
   
@@ -13,7 +13,7 @@ export default function Home() {
       {/* <SEO title="Home" description="This is Home Page" /> */}
       <main className="page">
         <Hero />
-        <AllServices />
+        <AllServices location={location} />
       </main>
     </Layout>
   )
