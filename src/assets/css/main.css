@@ -491,18 +491,18 @@ form > *:last-child {
 /* About */
 /*#########*/
 
-.about-page h2 {
-  text-transform: none;
+.about-header {
+  text-decoration: underline;
   font-weight: bold;
+  text-transform: none;
 }
-.about-page {
-  display: grid;
-  gap: 2rem 4rem;
-  padding-bottom: 3rem;
+.paragraph {
+  tab-size: 8;
+  padding-bottom: 1rem;
 }
 .about-img {
   border-radius: var(--borderRadius);
-  height: 500px;
+  height: 250px;
 }
 
 @media screen and (min-width: 992px) {
@@ -510,9 +510,6 @@ form > *:last-child {
     grid-template-columns: 1fr 1fr;
     align-items: center;
     height: 400px;
-  }
-  .about-img {
-    height: 100%;
   }
 }
 
@@ -560,6 +557,23 @@ form > *:last-child {
     font-size: 4rem;
     margin-bottom: 0;
   }
+}
+
+/* ######## */
+/* Questions */
+/* ########### */
+
+/* ######## */
+/* Questions End */
+/* ########### */
+.question-container{
+  width: 95%;
+  margin: auto;
+}
+
+.question h5{
+  margin-bottom: 0px;
+  color: var(--primary-500);
 }
 
 /*#########*/
