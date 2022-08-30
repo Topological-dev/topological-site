@@ -30,7 +30,7 @@ const About = () => {
               className="about-img"
               placeholder="tracedSVG"
               layout="fullWidth"
-              objectFit="scale-down"
+              objectFit="fill"
             />
             <h4 className="about-header">About us</h4>
             <article>
@@ -64,8 +64,8 @@ const About = () => {
               </div>
             </article>
             <h5 className="about-header">FAQs</h5>
+            <FAQs questions={Questions} />
           </section>
-          <FAQs questions={Questions} />
         </main>
       </Layout>
     </>

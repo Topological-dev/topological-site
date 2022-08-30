@@ -1,5 +1,6 @@
 import React from "react"
 import { Link } from "gatsby"
+import Video from "./Video"
 
 const ServiceDetails = ({ service, location, long }) => {
  
@@ -13,8 +14,9 @@ const ServiceDetails = ({ service, location, long }) => {
               Watch Demo ...
             </Link>
           </>
-        ) : (
-          long
+        ) : (<>
+          <Video url="https://www.youtube.com/embed/3AR432bguOY?" title="YouTube video player" allowFullScreen />
+          <div><strong>{service.title} </strong>: {long}</div></>
         )}
       </section>
     </>
