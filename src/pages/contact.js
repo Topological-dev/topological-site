@@ -19,8 +19,8 @@ const Contact = () => {
               shabby chic sustainable offal. Cray skateboard pitchfork sartorial
               cold-pressed forage pok pok kitsch beard cliche mlkshk distillery.
             </p>
-            <h4><b>phone: </b>(971)221-0092<FcPhone /></h4>
-            <h4 className="contact-email"><b>Email: </b>cchintada@topological.dev<FcFeedback /></h4>
+            <h4><b>phone: </b>(xxx)xxx-xxxx<FcPhone /></h4>
+            <h4 className="contact-email"><b>Email: </b>contactus@topological.dev<FcFeedback /></h4>
           </article>
           <article>
             <form className="form contact-form" action="https://formspree.io/f/mwkydnqe" method="POST">
