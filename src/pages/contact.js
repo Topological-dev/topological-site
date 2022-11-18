@@ -1,9 +1,26 @@
 import React from "react"
 import Layout from "../hoc/Layout"
 import {FcPhone, FcFeedback} from 'react-icons/fc'
+import { graphql, useStaticQuery } from "gatsby"
 // import SEO from "../components/SEO"
 
+const query = graphql`
+  query {
+    allContentfulSite {
+      nodes {
+        phone
+        email
+        contactUs {
+          contactUs
+        }
+      }
+    }
+  }
+`
+
 const Contact = () => {
+  const {allContentfulSite:{nodes:[{contactUs: {contactUs}, email, phone}]}} = useStaticQuery(query)
+  //console.log(data)
   return (
     <Layout>
       {/* <SEO title="Contact Us" /> */}
@@ -11,16 +28,9 @@ const Contact = () => {
         <section className="contact-page">
           <article>
             <h3>Let's get in touch</h3>
-            <p>
-              Fam hexagon fashion axe, praxis food truck salvia slow-carb master
-              cleanse neutra tousled selvage small batch pinterest. Chicharrones
-              irony PBR&B offal live-edge chia, polaroid shoreditch quinoa
-              adaptogen gluten-free. Selfies blog PBR&B fanny pack, wayfarers
-              shabby chic sustainable offal. Cray skateboard pitchfork sartorial
-              cold-pressed forage pok pok kitsch beard cliche mlkshk distillery.
-            </p>
-            <h4><b>phone: </b>(xxx)xxx-xxxx<FcPhone /></h4>
-            <h4 className="contact-email"><b>Email: </b>contactus@topological.dev<FcFeedback /></h4>
+            <p> &emsp;&emsp;{contactUs}</p>
+            <h4><b>phone: </b>{phone}<FcPhone /></h4>
+            <h4 className="contact-email"><b>Email: </b>{email}<FcFeedback /></h4>
           </article>
           <article>
             <form className="form contact-form" action="https://formspree.io/f/mwkydnqe" method="POST">

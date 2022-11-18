@@ -4,12 +4,12 @@ import PricingCard from "./PricingCard"
 const Pricing_data = [
   {
     type: "free forever",
-    dollarAmt: "0",
+    dollarAmt: 0,
     features: ["All demo videos", "documentation", "basic api testing"],
   },
   {
     type: "basic",
-    dollarAmt: "25000",
+    dollarAmt: 25000,
     features: [
       "Two basic flows",
       "1 month training to all resources for a project",
@@ -20,7 +20,7 @@ const Pricing_data = [
   },
   {
     type: "enterprise",
-    dollarAmt: "custom",
+    dollarAmt: -1,
     features: [
       "Unlimited flows",
       "Dedicated account manager",
@@ -31,9 +31,9 @@ const Pricing_data = [
   },
 ]
 
-const Pricings = () => {
+const Pricings = ({pricings}) => {
   return <div className="pricing">{
-    Pricing_data.map((data, index)=> (
+    pricings.map((data, index)=> (
       <PricingCard {...data} key={index} />
     ))}</div>
 }
