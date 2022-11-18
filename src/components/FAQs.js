@@ -5,8 +5,8 @@ const FAQs = ({ questions }) => {
     <div className="question-container">
       {questions.map( (question, index) =>
         <div key={index} className="question">
-          <h5>{question.title}</h5>
-          <p>&emsp;{question.answer}</p>
+          <h5>{question.question.question}</h5>
+          <p>&emsp;{question.answer.answer}</p>
         </div>
       )}
     </div>
